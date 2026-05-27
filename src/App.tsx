@@ -15,6 +15,9 @@ import Reuniones from "./pages/Reuniones";
 import Academia from "./pages/Academia";
 import Equipo from "./pages/Equipo";
 import Documentos from "./pages/Documentos";
+import Integraciones from "./pages/Integraciones";
+import Partners from "./pages/Partners";
+import Stakeholders from "./pages/Stakeholders";
 
 export default function App() {
   const [helpOpen, setHelpOpen] = useState(false);
@@ -63,6 +66,9 @@ export default function App() {
             <Route path="/reuniones" element={<Reuniones />} />
             <Route path="/academia" element={<Academia />} />
             <Route path="/equipo" element={<Equipo />} />
+            <Route path="/integraciones" element={<Integraciones />} />
+            <Route path="/partners" element={<Partners />} />
+            <Route path="/stakeholders" element={<Stakeholders />} />
           </Routes>
         </main>
       </div>

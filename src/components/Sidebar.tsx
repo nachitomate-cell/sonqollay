@@ -22,6 +22,14 @@ const groups: { titulo: string; items: { to: string; label: string; icon: string
       { to: "/equipo", label: "Equipo", icon: "◭" },
     ],
   },
+  {
+    titulo: "Conexiones",
+    items: [
+      { to: "/integraciones", label: "Integraciones", icon: "⇄" },
+      { to: "/partners", label: "Partners & Proveedores", icon: "⌬" },
+      { to: "/stakeholders", label: "Stakeholders", icon: "◯" },
+    ],
+  },
 ];
 
 export default function Sidebar() {

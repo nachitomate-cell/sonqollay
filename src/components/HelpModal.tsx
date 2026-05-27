@@ -142,6 +142,40 @@ const help: Record<string, HelpContent> = {
     ],
     conceptos: ["CDE", "BEP", "MIDP", "As Built"],
   },
+  "/integraciones": {
+    titulo: "Integraciones",
+    proposito:
+      "Hub central de sistemas conectados: BIM, planificación, ERP, BI, identidad y la propia AURA AI. Permite ver salud de cada conexión y rotar credenciales.",
+    comoUsar: [
+      "Filtra por categoría con los botones superiores.",
+      "Estado verde = conectada · ámbar = en piloto · rojo = error (revisar log).",
+      "Clic en una tarjeta abre detalle con scopes, cuenta y acciones (sincronizar / desconectar).",
+      "El registro de actividad muestra los últimos eventos: sync, webhook, auth, error.",
+    ],
+    conceptos: ["CDE", "BIM", "IFC"],
+  },
+  "/partners": {
+    titulo: "Partners y proveedores",
+    proposito:
+      "Red externa de Sonqollay: alianzas académicas (USM AC3E, AWP University), estatales (CORFO), software (Autodesk), subcontratos y asociaciones.",
+    comoUsar: [
+      "Filtra por tipo de partner con los chips superiores.",
+      "Cada tarjeta muestra relación, contrato, proyectos compartidos y NPS donde aplica.",
+      "Usa esta vista para gestionar renovaciones y detectar partners con bajo NPS.",
+    ],
+    conceptos: [],
+  },
+  "/stakeholders": {
+    titulo: "Mapa de stakeholders",
+    proposito:
+      "Visualiza todos los actores de un proyecto y su nivel de influencia/interés. Base para definir estrategia de comunicación (informar, consultar, involucrar, gestionar de cerca).",
+    comoUsar: [
+      "Selecciona un proyecto en el selector superior.",
+      "En el grafo, tamaño del nodo = influencia · línea continua = interés alto/medio · punteada = interés bajo.",
+      "La matriz inferior es la lista detallada con contacto directo (clic en email abre tu cliente de correo).",
+    ],
+    conceptos: [],
+  },
 };
 
 export default function HelpModal({

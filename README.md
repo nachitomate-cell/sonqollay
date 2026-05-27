@@ -17,6 +17,9 @@ Hoy gran parte de ese trabajo se realiza con planillas Excel, documentos Word y 
 | **Auditoría ISO 19650** | Checklist vivo del cumplimiento de gestión de información, en vez de auditorías Word/Excel |
 | **AURA AI** | Asistente que sugiere packaging, detecta clashes y predice constraints faltantes — continuación del proyecto AURA AWP (Sonqollay · AC3E USM · CORFO) |
 | **CDE · Documentos** | Repositorio en los 4 estados ISO 19650 (WIP / Shared / Published / Archived) con buscador y filtros |
+| **Integraciones** | Hub de sistemas conectados (Autodesk ACC, Trimble, Primavera P6, Power BI, Defontana, Teams, Aula Virtual Moodle, Entra ID, AURA AI…) con estado, scopes y log de eventos |
+| **Partners & Proveedores** | Red externa: alianzas académicas (USM AC3E, AWP University, CII), estatales (CORFO), software (Autodesk), asociaciones (buildingSMART) y subcontratos |
+| **Stakeholders** | Mapa visual por proyecto con todos los actores (mandante, EPC, subcontratos, autoridades, partners) y su matriz influencia × interés |
 | **Clientes (CRM)** | Cartera de cuentas con contactos clave, NPS, ingreso anual y pipeline de oportunidades ponderado |
 | **Reuniones** | Agenda de comités con minuta, asistentes y **acuerdos vinculados a proyectos** — fin de los compromisos olvidados en Word |
 | **Academia** | Catálogo de cursos del Aula Virtual (AWP, BIM, ISO 19650, Lean) con inscritos, ocupación e ingreso proyectado |

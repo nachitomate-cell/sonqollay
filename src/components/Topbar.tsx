@@ -47,6 +47,18 @@ const titles: Record<string, { t: string; s: string }> = {
     t: "CDE · Documentos",
     s: "Entorno común de datos en los 4 estados de ISO 19650",
   },
+  "/integraciones": {
+    t: "Integraciones",
+    s: "Sistemas conectados al ecosistema Pacha AWP",
+  },
+  "/partners": {
+    t: "Partners & Proveedores",
+    s: "Red de alianzas estratégicas, partners académicos, software y subcontratos",
+  },
+  "/stakeholders": {
+    t: "Mapa de Stakeholders",
+    s: "Actores e influencia por proyecto — base para la estrategia de comunicación",
+  },
 };
 
 interface Props {
