@@ -11,8 +11,10 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { Link } from "react-router-dom";
 import KpiCard from "../components/KpiCard";
 import { projects, workPackages } from "../data/seed";
+import { reuniones } from "../data/crm";
 
 const fmt = (n: number) => n.toLocaleString("es-CL");
 
@@ -125,6 +127,79 @@ export default function Dashboard() {
               </PieChart>
             </ResponsiveContainer>
           </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="card p-5">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="font-semibold text-ink-900">Próximas reuniones</h2>
+            <Link
+              to="/reuniones"
+              className="text-xs font-semibold text-brand-700 hover:text-brand-800"
+            >
+              Ver agenda →
+            </Link>
+          </div>
+          <ul className="divide-y divide-ink-100">
+            {reuniones
+              .filter((r) => r.estado === "Programada")
+              .slice(0, 4)
+              .map((r) => (
+                <li key={r.id} className="py-2.5 flex items-start gap-3">
+                  <div className="text-xs text-ink-500 font-mono w-20 shrink-0">
+                    {r.fecha}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm text-ink-900 truncate">
+                      {r.titulo}
+                    </div>
+                    <div className="text-xs text-ink-500">
+                      {r.hora} · {r.modalidad}
+                    </div>
+                  </div>
+                </li>
+              ))}
+          </ul>
+        </div>
+
+        <div className="card p-5">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="font-semibold text-ink-900">
+              Acuerdos pendientes
+            </h2>
+            <Link
+              to="/reuniones"
+              className="text-xs font-semibold text-brand-700 hover:text-brand-800"
+            >
+              Ver todos →
+            </Link>
+          </div>
+          <ul className="divide-y divide-ink-100">
+            {reuniones
+              .flatMap((r) => r.acuerdos)
+              .filter((a) => a.estado !== "Cerrado")
+              .slice(0, 5)
+              .map((a) => (
+                <li key={a.id} className="py-2.5 flex items-start gap-3">
+                  <span
+                    className={`w-2 h-2 mt-1.5 rounded-full ${
+                      a.estado === "Abierto"
+                        ? "bg-amber-500"
+                        : "bg-brand-500"
+                    }`}
+                  />
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm text-ink-900">
+                      {a.descripcion}
+                    </div>
+                    <div className="text-xs text-ink-500">
+                      {a.responsable} · vence {a.due}
+                    </div>
+                  </div>
+                </li>
+              ))}
+          </ul>
         </div>
       </div>
 

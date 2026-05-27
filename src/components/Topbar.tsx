@@ -26,6 +26,22 @@ const titles: Record<string, { t: string; s: string }> = {
     t: "AURA · Asistente AI",
     s: "Sugerencias de packaging y detección de riesgos sobre el modelo BIM",
   },
+  "/clientes": {
+    t: "Clientes",
+    s: "CRM con cuentas, contactos, NPS y pipeline de oportunidades",
+  },
+  "/reuniones": {
+    t: "Reuniones",
+    s: "Agenda, minutas y acuerdos vinculados a proyectos y clientes",
+  },
+  "/academia": {
+    t: "Academia Sonqollay",
+    s: "Catálogo de cursos AWP, BIM, ISO 19650 y Lean Construction",
+  },
+  "/equipo": {
+    t: "Equipo de consultores",
+    s: "Capacidad, utilización y asignación a proyectos",
+  },
 };
 
 export default function Topbar() {

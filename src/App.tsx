@@ -7,6 +7,10 @@ import Readiness from "./pages/Readiness";
 import PathOfConstruction from "./pages/PathOfConstruction";
 import Audit from "./pages/Audit";
 import Aura from "./pages/Aura";
+import Clientes from "./pages/Clientes";
+import Reuniones from "./pages/Reuniones";
+import Academia from "./pages/Academia";
+import Equipo from "./pages/Equipo";
 
 export default function App() {
   return (
@@ -23,6 +27,10 @@ export default function App() {
             <Route path="/path" element={<PathOfConstruction />} />
             <Route path="/audit" element={<Audit />} />
             <Route path="/aura" element={<Aura />} />
+            <Route path="/clientes" element={<Clientes />} />
+            <Route path="/reuniones" element={<Reuniones />} />
+            <Route path="/academia" element={<Academia />} />
+            <Route path="/equipo" element={<Equipo />} />
           </Routes>
         </main>
       </div>

@@ -16,6 +16,10 @@ Hoy gran parte de ese trabajo se realiza con planillas Excel, documentos Word y 
 | **Path of Construction** | Vista tipo Gantt con disciplinas y línea de hoy, sincronizada al modelo BIM |
 | **Auditoría ISO 19650** | Checklist vivo del cumplimiento de gestión de información, en vez de auditorías Word/Excel |
 | **AURA AI** | Asistente que sugiere packaging, detecta clashes y predice constraints faltantes — continuación del proyecto AURA AWP (Sonqollay · AC3E USM · CORFO) |
+| **Clientes (CRM)** | Cartera de cuentas con contactos clave, NPS, ingreso anual y pipeline de oportunidades ponderado |
+| **Reuniones** | Agenda de comités con minuta, asistentes y **acuerdos vinculados a proyectos** — fin de los compromisos olvidados en Word |
+| **Academia** | Catálogo de cursos del Aula Virtual (AWP, BIM, ISO 19650, Lean) con inscritos, ocupación e ingreso proyectado |
+| **Equipo** | Consultores con utilización (objetivo 75-85%), especialidades, carga por proyecto y certificaciones |
 
 ## Stack
 
@@ -63,5 +67,9 @@ src/
     ├── Readiness.tsx
     ├── PathOfConstruction.tsx
     ├── Audit.tsx
-    └── Aura.tsx
+    ├── Aura.tsx
+    ├── Clientes.tsx
+    ├── Reuniones.tsx
+    ├── Academia.tsx
+    └── Equipo.tsx
 ```

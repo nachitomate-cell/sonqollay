@@ -68,3 +68,84 @@ export interface AuditItem {
   evidencia?: string;
   responsable: string;
 }
+
+export interface Contacto {
+  nombre: string;
+  cargo: string;
+  email: string;
+  telefono?: string;
+}
+
+export interface Oportunidad {
+  id: string;
+  nombre: string;
+  etapa: "Prospecto" | "Propuesta" | "Negociación" | "Ganada" | "Perdida";
+  monto: number;
+  probabilidad: number;
+  cierreEstimado: string;
+}
+
+export interface Cliente {
+  id: string;
+  razonSocial: string;
+  sector: "Minería" | "Energía" | "Industria" | "Infraestructura" | "Pública";
+  pais: string;
+  rut: string;
+  desde: string;
+  proyectosActivos: number;
+  ingresoAnual: number;
+  nps: number;
+  contactos: Contacto[];
+  oportunidades: Oportunidad[];
+}
+
+export interface Acuerdo {
+  id: string;
+  descripcion: string;
+  responsable: string;
+  due: string;
+  estado: "Abierto" | "En curso" | "Cerrado";
+  proyectoId?: string;
+}
+
+export interface Reunion {
+  id: string;
+  titulo: string;
+  fecha: string;
+  hora: string;
+  duracionMin: number;
+  modalidad: "Presencial" | "Online" | "Híbrida";
+  proyectoId?: string;
+  clienteId?: string;
+  organizador: string;
+  asistentes: string[];
+  agenda: string[];
+  minuta?: string;
+  acuerdos: Acuerdo[];
+  estado: "Programada" | "Realizada" | "Cancelada";
+}
+
+export interface Curso {
+  id: string;
+  titulo: string;
+  categoria: "AWP" | "BIM" | "ISO 19650" | "Lean Construction";
+  modalidad: "Online" | "Presencial" | "B-Learning";
+  duracionHoras: number;
+  precio: number;
+  proximaCohorte: string;
+  inscritos: number;
+  cupos: number;
+  instructor: string;
+  rating: number;
+}
+
+export interface Consultor {
+  id: string;
+  nombre: string;
+  rol: string;
+  especialidades: string[];
+  utilizacion: number;
+  cargaPorProyecto: { proyectoId: string; horas: number }[];
+  certificaciones: string[];
+  avatar: string;
+}
