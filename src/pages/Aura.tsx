@@ -44,9 +44,9 @@ export default function Aura() {
 
   return (
     <div className="space-y-6">
-      <div className="card p-6 bg-gradient-to-br from-ink-900 to-ink-800 text-white">
+      <div className="card p-6 andean-gradient text-white">
         <div className="flex items-start gap-4">
-          <div className="w-12 h-12 rounded-xl bg-brand-500/30 flex items-center justify-center text-2xl">
+          <div className="w-12 h-12 rounded-xl brand-gradient flex items-center justify-center text-2xl text-white shadow-md">
             ✦
           </div>
           <div className="flex-1">
@@ -66,7 +66,7 @@ export default function Aura() {
             placeholder="Pregúntame: ¿qué IWP puedo liberar la próxima semana sin sobrecargar mecánica?"
             className="flex-1 bg-ink-950/60 border border-ink-700 rounded-lg px-4 py-2.5 text-sm placeholder:text-ink-500 focus:outline-none focus:ring-2 focus:ring-brand-400"
           />
-          <button className="px-4 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-ink-950 font-semibold text-sm">
+          <button className="px-4 py-2.5 rounded-lg brand-gradient text-white font-semibold text-sm hover:opacity-90">
             Preguntar
           </button>
         </div>

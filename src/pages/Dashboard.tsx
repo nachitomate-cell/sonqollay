@@ -98,7 +98,7 @@ export default function Dashboard() {
                   tickFormatter={(v) => `${(v / 1_000_000).toFixed(1)}M`}
                 />
                 <Tooltip formatter={(v: number) => fmt(v) + " HH"} />
-                <Bar dataKey="hh" fill="#06b6d4" radius={[8, 8, 0, 0]} />
+                <Bar dataKey="hh" fill="#EA580C" radius={[8, 8, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>

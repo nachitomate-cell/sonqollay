@@ -21,6 +21,26 @@ Hoy gran parte de ese trabajo se realiza con planillas Excel, documentos Word y 
 | **Academia** | Catálogo de cursos del Aula Virtual (AWP, BIM, ISO 19650, Lean) con inscritos, ocupación e ingreso proyectado |
 | **Equipo** | Consultores con utilización (objetivo 75-85%), especialidades, carga por proyecto y certificaciones |
 
+## Identidad visual
+
+La paleta está inspirada en la raíz andina del nombre **Sonqollay** (del quechua *sonqo*, "corazón") y en el sector minero/energético chileno donde opera la consultora:
+
+| Token | Hex | Uso |
+| --- | --- | --- |
+| `brand-500` (cobre) | `#EA580C` | Primario, CTAs, KPIs destacados |
+| `brand-700` (cobre oscuro) | `#9A3412` | Hover, textos sobre cobre claro |
+| `gold-400` (sol andino) | `#FBBF24` | Acento, sello de calidad |
+| `ink-900` (azul noche andina) | `#0B1F3A` | Sidebar, texto principal |
+| `ink-50` (cordillera neutra) | `#F6F4F0` | Fondo de la app |
+
+Logos en `public/`:
+
+- `sonqollay-logo.svg` — logo + wordmark horizontal (220×64)
+- `sonqollay-mark.svg` — isotipo cuadrado (48×48)
+- `favicon.svg` — favicon con fondo navy
+
+> ⚠️ Estos archivos son una interpretación basada en el significado del nombre y el sector. Para reemplazarlos por los oficiales de Sonqollay, sobrescribe los SVG en `public/` con el mismo nombre (o ajusta la ruta en `src/components/Sidebar.tsx` y `index.html`). Los colores se cambian en un solo lugar: el bloque `@theme` de `src/index.css`.
+
 ## Stack
 
 - **Vite + React 18 + TypeScript** — SPA rápida, fácil de empaquetar

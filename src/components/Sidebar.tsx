@@ -28,13 +28,18 @@ export default function Sidebar() {
     <aside className="w-64 shrink-0 bg-ink-900 text-ink-100 flex flex-col">
       <div className="p-5 border-b border-ink-800">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-400 to-brand-800 flex items-center justify-center text-white font-bold">
-            P
+          <div className="w-11 h-11 rounded-xl bg-white/95 flex items-center justify-center shadow-sm">
+            <img
+              src="/sonqollay-mark.svg"
+              alt=""
+              className="w-8 h-8"
+              aria-hidden="true"
+            />
           </div>
           <div>
-            <div className="font-bold tracking-tight">Pacha AWP</div>
-            <div className="text-[11px] text-ink-400 uppercase tracking-widest">
-              by Sonqollay
+            <div className="font-bold tracking-tight text-white">Sonqollay</div>
+            <div className="text-[10px] text-gold-400 uppercase tracking-[0.18em] font-semibold">
+              Pacha AWP
             </div>
           </div>
         </div>
@@ -73,7 +78,9 @@ export default function Sidebar() {
 
       <div className="p-4 border-t border-ink-800 text-[11px] text-ink-400 leading-snug">
         <div>v0.2 · piloto interno</div>
-        <div className="mt-1">© Sonqollay · BIM · AWP · Lean · ISO 19650</div>
+        <div className="mt-1 text-ink-500">
+          © Sonqollay · BIM · AWP · Lean · ISO 19650
+        </div>
       </div>
     </aside>
   );
