@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { projects } from "../data/seed";
+import Notifications from "./Notifications";
 
 const titles: Record<string, { t: string; s: string }> = {
   "/dashboard": {
@@ -42,31 +43,82 @@ const titles: Record<string, { t: string; s: string }> = {
     t: "Equipo de consultores",
     s: "Capacidad, utilización y asignación a proyectos",
   },
+  "/documentos": {
+    t: "CDE · Documentos",
+    s: "Entorno común de datos en los 4 estados de ISO 19650",
+  },
 };
 
-export default function Topbar() {
+interface Props {
+  onOpenSearch: () => void;
+  onOpenHelp: () => void;
+}
+
+export default function Topbar({ onOpenSearch, onOpenHelp }: Props) {
   const loc = useLocation();
   const meta = titles[loc.pathname] ?? { t: "Pacha AWP", s: "" };
+
+  const isMac =
+    typeof navigator !== "undefined" &&
+    navigator.platform.toLowerCase().includes("mac");
+  const kCombo = isMac ? "⌘K" : "Ctrl K";
+
   return (
-    <header className="bg-white border-b border-ink-200 px-6 lg:px-8 py-4 flex items-center justify-between gap-6">
-      <div>
-        <h1 className="text-xl font-semibold tracking-tight text-ink-900">
+    <header className="bg-white border-b border-ink-200 px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
+      <div className="min-w-0">
+        <h1 className="text-xl font-semibold tracking-tight text-ink-900 truncate">
           {meta.t}
         </h1>
-        <p className="text-sm text-ink-500">{meta.s}</p>
+        <p className="text-sm text-ink-500 truncate">{meta.s}</p>
       </div>
-      <div className="flex items-center gap-3">
+
+      <div className="flex items-center gap-2 shrink-0">
+        <button
+          onClick={onOpenSearch}
+          className="hidden md:flex items-center gap-2 h-9 px-3 rounded-lg border border-ink-200 bg-ink-50 hover:bg-white text-sm text-ink-500 min-w-[230px]"
+          title="Buscar (Cmd/Ctrl + K)"
+        >
+          <span>⌕</span>
+          <span className="flex-1 text-left">Buscar…</span>
+          <kbd className="text-[10px] text-ink-500 bg-white border border-ink-200 px-1.5 py-0.5 rounded">
+            {kCombo}
+          </kbd>
+        </button>
+
+        <button
+          onClick={onOpenSearch}
+          className="md:hidden w-9 h-9 rounded-lg border border-ink-200 bg-white hover:bg-ink-50 flex items-center justify-center text-ink-600"
+          aria-label="Buscar"
+        >
+          ⌕
+        </button>
+
         <select
           defaultValue="P-001"
-          className="text-sm border border-ink-200 rounded-lg px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-brand-300"
+          className="hidden lg:block text-sm border border-ink-200 rounded-lg px-3 h-9 bg-white focus:outline-none focus:ring-2 focus:ring-brand-300"
         >
           {projects.map((p) => (
             <option key={p.id} value={p.id}>
-              {p.nombre} — {p.cliente}
+              {p.nombre}
             </option>
           ))}
         </select>
-        <div className="w-9 h-9 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center text-sm font-semibold">
+
+        <Notifications />
+
+        <button
+          onClick={onOpenHelp}
+          className="w-9 h-9 rounded-lg border border-ink-200 bg-white hover:bg-ink-50 flex items-center justify-center text-ink-600 font-bold"
+          aria-label="Ayuda"
+          title="Ayuda contextual ( ? )"
+        >
+          ?
+        </button>
+
+        <div
+          className="w-9 h-9 rounded-full brand-gradient text-white flex items-center justify-center text-sm font-semibold shadow-sm"
+          title="Ignacio (usuario)"
+        >
           IM
         </div>
       </div>

@@ -9,6 +9,7 @@ const groups: { titulo: string; items: { to: string; label: string; icon: string
       { to: "/readiness", label: "Readiness IWP", icon: "✓" },
       { to: "/path", label: "Path of Construction", icon: "→" },
       { to: "/audit", label: "Auditoría ISO 19650", icon: "◉" },
+      { to: "/documentos", label: "CDE · Documentos", icon: "▥" },
       { to: "/aura", label: "AURA AI", icon: "✦" },
     ],
   },

@@ -16,6 +16,7 @@ Hoy gran parte de ese trabajo se realiza con planillas Excel, documentos Word y 
 | **Path of Construction** | Vista tipo Gantt con disciplinas y línea de hoy, sincronizada al modelo BIM |
 | **Auditoría ISO 19650** | Checklist vivo del cumplimiento de gestión de información, en vez de auditorías Word/Excel |
 | **AURA AI** | Asistente que sugiere packaging, detecta clashes y predice constraints faltantes — continuación del proyecto AURA AWP (Sonqollay · AC3E USM · CORFO) |
+| **CDE · Documentos** | Repositorio en los 4 estados ISO 19650 (WIP / Shared / Published / Archived) con buscador y filtros |
 | **Clientes (CRM)** | Cartera de cuentas con contactos clave, NPS, ingreso anual y pipeline de oportunidades ponderado |
 | **Reuniones** | Agenda de comités con minuta, asistentes y **acuerdos vinculados a proyectos** — fin de los compromisos olvidados en Word |
 | **Academia** | Catálogo de cursos del Aula Virtual (AWP, BIM, ISO 19650, Lean) con inscritos, ocupación e ingreso proyectado |
@@ -48,6 +49,14 @@ Logos en `public/`:
 - **React Router** — navegación entre módulos
 - **Recharts** — gráficos del dashboard
 - Datos seed embebidos (`src/data/seed.ts`) — listos para reemplazar por una API REST hacia el CDE / ERP del cliente
+
+## Ayuda y productividad
+
+- **`?`** — abre la guía contextual de la pantalla actual + conceptos AWP/ISO relevantes
+- **`⌘K` / `Ctrl K`** — paleta de comandos para saltar a cualquier proyecto, IWP, cliente, reunión
+- **`Esc`** — cierra cualquier modal
+- **Campana en topbar** — notificaciones automáticas (IWP listos, IWP bloqueados, acuerdos abiertos)
+- **Glosario integrado** — desde el modal de ayuda, accesible en cada pantalla (CWA, CWP, EWP, IWP, BEP, MIDP, OIR, AIR, etc.)
 
 ## Cómo correr
 
